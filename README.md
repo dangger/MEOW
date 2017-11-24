@@ -45,7 +45,17 @@
     # shadowsocks 上级代理
     # proxy = ss://aes-128-cfb:password@example.server.com:25
     # HTTPS 上级代理
-    # proxy = https://user:password@example.server.com:port
+    # proxy = https://user:password@example.server.com:port
+## 如何使用指定配置文件
+拿supervisor来做例子：  
+      ``` 
+       [program:meow]  
+       command=/home/dangge/meow -rc="/home/dangge/.meow/rc" 
+       autostart=true                   ; 程序是否随supervisor启动而启动  
+       autorestart=true                 ;程序停止时，是否自动重启  
+       startsecs=10 
+       ```
+
 
 ## 工作方式
 
